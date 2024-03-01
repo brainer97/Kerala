@@ -1,0 +1,217 @@
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="static/Main.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Dashboard Sidebar Menu</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Keralam.AI</span>
+                    <span class="profession"> Genarative Ai model</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="{{ url_for('img') }}" style="text-decoration: none; color: inherit;">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">AI Image Genarate</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                         <a href="{{ url_for('app1index') }}" style="text-decoration: none; color: inherit;">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Ai Chatboat</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="{{ url_for('tts_index') }}" style="text-decoration: none; color: inherit;">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Text To Speech</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="{{ url_for('transalator') }}" style="text-decoration: none; color: inherit;">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Ai Transalator</span>
+                        </a>
+                    </li>
+
+             <!---    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Wallets</span>
+                        </a>
+                    </li>--->
+                </ul>
+            </div>
+
+
+            <div class="bottom-content">
+                <li class="">
+              <a href="{{ url_for('index') }}">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Experience Kerala's First All( I ) In one Platform </div>
+
+    </section>
+
+  <section class="swiper mySwiper">
+
+  <div class="swiper-wrapper">
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+           <img src="{{ url_for('static', filename='assets/images/TTI.jpeg') }}" alt="card image">
+        </div>
+
+        <div class="card__content">
+
+          <span class="card__title"> AI Image Generator </span>
+          <span class="card__name">AI Image Experience</span>
+          <p class="card__text">
+An AI image generation bot is a computer program equipped with advanced artificial intelligence algorithms designed to create realistic and visually appealing images. </p>
+          <button class="card__btn">
+          <a href="{{ url_for('img') }}" style="text-decoration: none; color: inherit;">
+              View More </a></button>
+
+        </div>
+
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+            <img src="{{ url_for('static', filename='assets/images/chatboat.jpg') }}" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">AI Chatboat</span>
+          <span class="card__name">AI Chat Experience</span>
+          <p class="card__text">
+An AI chatbot, short for chat robot, is a computer program designed to simulate conversation with human users, providing an interactive and natural language-based interface.</p>
+          <button class="card__btn">
+              <a href="{{ url_for('app1index') }}" style="text-decoration: none; color: inherit;">
+              View More </a></button>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+        <img src="{{ url_for('static', filename='assets/images/TTS.png') }}" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Text To Speech</span>
+          <span class="card__name"> Ai Speech Experience</span>
+          <p class="card__text">Text-to-Speech (TTS) technology is a transformative application of artificial intelligence that converts written text into spoken words.</p>
+          <button class="card__btn">
+              <a href="{{ url_for('tts_index') }}" style="text-decoration: none; color: inherit;">
+              View More </a></button>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+      <img src="{{ url_for('static', filename='assets/images/Aitrans.jpeg') }}" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Ai Transalator</span>
+          <span class="card__name"> Ai Transalate Experience</span>
+          <p class="card__text">
+AI translation,  is a groundbreaking application of artificial intelligence designed to convert text or spoken content from one language into another with remarkable accuracy and efficiency.</p>
+          <button class="card__btn">
+              <a href="{{ url_for('transalator') }}" style="text-decoration: none; color: inherit;"> View More</a>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+    <script src="static/scripts.js"></script>
+
+</body>
+</html>
